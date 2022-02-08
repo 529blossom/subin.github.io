@@ -1,0 +1,810 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@900&display=swap" rel="stylesheet');
+@font-face {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  margin: 0;
+  height: 100%;
+  color: #474341;
+  word-break: keep-all;
+}
+
+button {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.body {
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 70px;
+  overflow-x: hidden;
+}
+
+.wrap {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.phone {
+  display: none;
+}
+
+.phoneblock {
+  display: none;
+}
+
+.phone-dp {
+  display: inline-block;
+}
+
+input[type="text"],
+input[type="password"],
+select,
+textarea {
+  height: 45px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 18px;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder,
+select::placeholder,
+textarea::placeholder {
+  color: #a1a1a1;
+  font-weight: 200;
+}
+
+/*풋터*/
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #373737;
+  color: #cecece;
+  padding: 30px 0;
+}
+
+.footer .address {
+  font-size: 13px;
+  font-weight: 100;
+  float: left;
+  width: 50%;
+}
+
+.footer .address p {
+  margin-bottom: 20px;
+  line-height: 25px;
+}
+
+.footer .address select {
+  border: none;
+  padding: 5px 10px;
+}
+
+.footer .call {
+  float: right;
+  width: 45%;
+}
+
+.footer .call h3 {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.footer .call .call-con {
+  width: 100%;
+  border-top: 1px solid #dadada;
+  padding-top: 15px;
+}
+
+.footer .call .call-con .number {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.footer .call .call-con .time {
+  font-size: 13px;
+  letter-spacing: 1px !important;
+}
+
+.footer .call .call-con .time span {
+  margin-right: 10px;
+}
+
+/*상단네비*/
+.main-navi {
+  position: absolute;
+  width: 100%;
+  z-index: 999;
+}
+
+.main-navi .navi-wrap {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main-navi .navi-wrap h1 {
+  float: left;
+}
+
+.main-navi .navi-wrap .pc-navi {
+  float: right;
+}
+
+.main-navi .navi-wrap .pc-navi li {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  font-weight: bold;
+  position: relative;
+  margin-top: 10px;
+}
+
+.main-navi .navi-wrap .pc-navi li:last-child a {
+  padding-right: 0;
+}
+
+.main-navi .navi-wrap .pc-navi li a {
+  display: block;
+  color: #fff;
+  padding: 15px 20px;
+}
+
+.main-navi .navi-wrap .pc-navi li .pc-navi-dropmenu {
+  display: none;
+  position: absolute;
+  background: #fff;
+  z-index: 10;
+  left: -20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.main-navi .navi-wrap .pc-navi li .pc-navi-dropmenu li {
+  display: block;
+}
+
+.main-navi .navi-wrap .pc-navi li .pc-navi-dropmenu li:hover {
+  background: #deebf1;
+}
+
+.main-navi .navi-wrap .pc-navi li .pc-navi-dropmenu li a {
+  display: block;
+  padding: 5px 40px;
+}
+
+.main-navi .navi-wrap .m-navi {
+  display: none;
+}
+
+.main-navi .navi-wrap .m-navi-btn {
+  display: none;
+}
+
+/*메인*/
+.main-visual {
+  background: #deebf1;
+  background: url(../images/main_img.png) no-repeat left top;
+  width: 100%;
+  min-height: 680px;
+}
+
+.main-visual .how-title-wrap {
+  padding-top: 200px;
+}
+
+.main-visual .how-title-wrap h2 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.main-visual .how-title-wrap h3 {
+  color: #fff;
+  padding-top: 15px;
+  font-size: 20px;
+}
+
+.index-con {
+  padding: 100px 0;
+}
+
+.index-con h3 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.index-con h3 span {
+  font-weight: 300;
+}
+
+.index-con .how {
+  position: relative;
+  margin-bottom: 120px;
+}
+
+.index-con .how .title {
+  float: left;
+}
+
+.index-con .how .title p {
+  line-height: 30px;
+}
+
+.index-con .how .visual {
+  position: absolute;
+  right: 0;
+  top: -15px;
+  z-index: -1;
+}
+
+.index-con .how-test {
+  text-align: center;
+  padding: 0 0 120px 0;
+}
+
+.index-con .how-test ul li {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 30px;
+}
+
+.index-con .how-test ul li:last-child {
+  margin-right: 0px;
+}
+
+.index-con .how-test ul li .title {
+  font-weight: bold;
+  font-size: 21px;
+  margin-bottom: 15px;
+}
+
+.index-con .how-to {
+  text-align: center;
+  padding: 120px 0 120px 0;
+  background: url(../images/how-to-img.png) no-repeat left top;
+  color: #fff;
+}
+
+.index-con .how-to .how-list {
+  width: 1000px;
+  margin: 50px auto 0 auto;
+}
+
+.index-con .how-to .how-list .title {
+  background: #52CAFF;
+  padding: 15px 0;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 25px 25px 0 0;
+}
+
+.index-con .how-to .how-list .con-box {
+  background: #fff;
+  padding: 50px;
+  border-radius: 0 0 25px 25px;
+}
+
+.index-con .how-to .how-list .con-box p {
+  font-size: 18px;
+  color: #373737;
+}
+
+.index-con .how-to .how-list .con-box p.how-to-img {
+  padding-top: 20px;
+}
+
+.index-con .how-process {
+  width: 100%;
+  padding: 120px 0 120px 0;
+  text-align: center;
+}
+
+.index-con .how-process h3 {
+  margin-bottom: 50px;
+}
+
+.index-con .how-process ul li {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 14px;
+}
+
+.index-con .how-process ul li:first-child {
+  padding-left: 0;
+}
+
+.index-con .how-process ul li:nth-child(2n) {
+  padding-top: 80px;
+}
+
+.index-con .how-process ul li:last-child {
+  padding-right: 0;
+}
+
+.index-con .how-process ul li .title {
+  font-weight: bold;
+  font-size: 21px;
+  padding: 15px 0;
+}
+
+.index-con .how-process ul li a {
+  font-size: 15px;
+  color: #005e9e;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.index-con .how-process ul li a::after {
+  display: block;
+  content: '';
+  border-bottom: 1px solid #005e9e;
+}
+
+.index-con .how-index {
+  text-align: center;
+  padding: 120px 0 0 0;
+  background: url(../images/how_platform.png) no-repeat left top;
+}
+
+.index-con .how-index ul {
+  width: 100%;
+  text-align: left;
+  margin-top: 48px;
+}
+
+.index-con .how-index ul li {
+  display: inline-block;
+}
+
+.index-con .how-index ul li.txt {
+  width: 400px;
+  text-align: left;
+  vertical-align: top;
+  margin-top: 100px;
+  font-size: 20px;
+}
+
+.index-con .how-index ul li.txt .sub {
+  padding-top: 15px;
+}
+
+.index-con .how-index ul li.phone-img {
+  width: 796px;
+  margin-left: -300px;
+}
+
+.index-con .how-class {
+  text-align: center;
+  padding: 120px 0 120px 0;
+  background: url(../images/how_class_bg.png) no-repeat left top;
+  color: #fff;
+}
+
+.index-con .how-class ul {
+  width: 1000px;
+  margin: 50px auto 0 auto;
+}
+
+.index-con .how-class ul li {
+  border-radius: 15px;
+  background: #fff;
+  color: #373737;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.index-con .how-class ul li p {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.index-con .how-class ul li p.title {
+  width: 25%;
+}
+
+.index-con .how-class ul li p.sub {
+  width: 74%;
+  padding: 0 0 0 50px;
+  border-left: 1px dotted #999;
+  text-align: left;
+}
+
+.how-layer-bg {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 99999;
+  overflow: auto;
+  -ms-overflow-style: none;
+}
+
+.how-layer-bg .how-layer {
+  min-width: 500px;
+  max-width: 600px;
+  margin: 0 auto 50px auto;
+  margin-top: 100px;
+  background-color: #FFF;
+  z-index: 9999;
+  display: block;
+  white-space: nowrap;
+  position: relative;
+  padding: 50px 0;
+}
+
+.how-layer-bg .how-layer .top {
+  text-align: center;
+}
+
+.how-layer-bg .how-layer .top p {
+  font-size: 16px;
+}
+
+.how-layer-bg .how-layer .layer-close {
+  display: inline-block;
+  position: absolute;
+  right: 0px;
+  top: -50px;
+}
+
+.how-layer-bg .how-layer .layer-close img {
+  width: 30px;
+}
+
+.how-layer-bg .how-layer .login-box {
+  width: 80%;
+  margin: 40px auto 00px auto;
+  display: block;
+  padding-bottom: 20px;
+}
+
+.how-layer-bg .how-layer .login-box .login-form {
+  position: relative;
+  margin-top: 10px;
+  border: 1px solid #dadada;
+  font-size: 15px;
+}
+
+.how-layer-bg .how-layer .login-box .login-form input.input-login {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 0 15px;
+  border: 0;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 25px;
+  color: #1e1e1e;
+  vertical-align: top;
+  background-color: transparent;
+  outline: 0;
+}
+
+.how-layer-bg .how-layer .login-box .login-form .txt-alert {
+  color: #ff6969;
+  font-size: 12px;
+  margin: 5px 0 10px 0;
+  display: none;
+}
+
+.how-layer-bg .how-layer .login-box .login-setting {
+  margin-top: 10px;
+}
+
+.how-layer-bg .how-layer .login-box .login-setting .lab-check {
+  font-size: 16px;
+}
+
+.how-layer-bg .how-layer .login-box .btn-login {
+  width: 100%;
+  padding: 13px 0;
+  text-align: center;
+  background: #404040;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 30px 0 0 0;
+  border: none;
+}
+
+.how-layer-bg .how-layer .login-box .login-rel {
+  text-align: center;
+  font-size: 16px;
+  margin-top: 30px;
+}
+
+/*반응형 - 아이패드프로 (세로) 기준*/
+@media only screen and (max-width: 1024px) {
+  /*공통*/
+  .body {
+    min-height: 100%;
+    position: relative;
+    padding-bottom: 320px;
+  }
+  .wrap {
+    width: 95%;
+  }
+  /*네비 (메인)*/
+  .main-navi .navi-wrap {
+    width: 95%;
+    padding: 10px 0;
+  }
+  .main-navi .navi-wrap h1 {
+    margin-top: 0;
+    width: 150px;
+  }
+  .main-navi .navi-wrap h1 img {
+    width: 100%;
+  }
+  .main-navi .navi-wrap .pc-navi {
+    display: none;
+  }
+  .main-navi .navi-wrap .m-navi-btn {
+    display: block;
+    float: right;
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  .main-navi .navi-wrap .m-navi {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    height: 100%;
+    min-height: 100%;
+    background: #fff;
+    width: 310px;
+  }
+  .main-navi .navi-wrap .m-navi .m-navi-top {
+    padding: 20px;
+  }
+  .main-navi .navi-wrap .m-navi .m-navi-top a {
+    color: #fff;
+    float: right;
+  }
+  .main-navi .navi-wrap .m-navi .m-navi-con .m-navi-li {
+    border-bottom: 1px solid #eeeeee;
+  }
+  .main-navi .navi-wrap .m-navi .m-navi-con .m-navi-li a {
+    padding: 10px 20px;
+    display: block;
+  }
+  .main-visual .wrap {
+    padding-top: 200px;
+  }
+  .main-visual .wrap .how-title-wrap {
+    margin-top: 0;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .index-con .how-test {
+    padding: 0 0 40px 0;
+  }
+  .index-con .how-test ul li {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  .index-con .how-test ul li p.title {
+    font-size: 18px;
+  }
+  .index-con .how-test ul li p.sub {
+    font-size: 16px;
+  }
+  .index-con .how-test ul li img {
+    width: 100%;
+  }
+  .index-con .how-to {
+    padding: 50px 0;
+  }
+  .index-con .how-to .how-list {
+    width: 100%;
+    margin: 40px auto 0 auto;
+  }
+  .index-con .how-to .how-list .title {
+    padding: 15px;
+    font-size: 18px;
+  }
+  .index-con .how-to .how-list .con-box {
+    padding: 20px;
+  }
+  .index-con .how-to .how-list .con-box p {
+    font-size: 16px;
+  }
+  .index-con .how-to .how-list .con-box p.how-to-img img {
+    width: 100%;
+  }
+  .index-con .how-process {
+    padding: 50px 0;
+  }
+  .index-con .how-process ul li {
+    width: 40%;
+    margin-right: 6%;
+    padding: 0;
+  }
+  .index-con .how-process ul li img {
+    width: 100%;
+  }
+  .index-con .how-process ul li:nth-child(2n) {
+    display: none;
+  }
+  .index-con .how-process ul li:nth-child(3n) {
+    margin-right: 0;
+  }
+  .index-con .how-process ul li .title {
+    font-size: 16px;
+  }
+  .index-con .how-index {
+    padding: 50px 0 0 0;
+  }
+  .index-con .how-index ul {
+    width: 100%;
+    text-align: left;
+    margin-top: 30px;
+  }
+  .index-con .how-index ul li.txt {
+    width: 100%;
+    margin-top: 0;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 20px;
+  }
+  .index-con .how-index ul li.txt p.title {
+    width: 100%;
+  }
+  .index-con .how-index ul li.txt p.sub {
+    padding-top: 20px;
+    font-size: 16px;
+  }
+  .index-con .how-index ul li.phone-img {
+    width: 100%;
+    margin-left: 0;
+  }
+  .index-con .how-index ul li.phone-img img {
+    width: 100%;
+  }
+  .index-con .how-class {
+    padding: 50px 0;
+    background-size: cover;
+  }
+  .index-con .how-class ul {
+    width: 100%;
+    margin: 30px auto 0 auto;
+  }
+  .index-con .how-class ul li {
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+  .index-con .how-class ul li p.title {
+    width: 100%;
+    padding-bottom: 15px;
+    border-bottom: 1px dotted #999;
+  }
+  .index-con .how-class ul li p.sub {
+    width: 100%;
+    padding: 0;
+    border-left: 0;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 15px;
+  }
+  /*레이어 팝업*/
+  .how-layer-bg .how-layer {
+    min-width: 90%;
+    max-width: 90%;
+    margin: 50px auto;
+  }
+  .how-layer-bg .how-layer .layer-close {
+    top: -40px;
+  }
+  .how-layer-bg .how-layer .top {
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .how-layer-bg .how-layer .top p {
+    white-space: normal;
+    font-size: 14px;
+  }
+  .how-layer-bg .how-layer .login-box {
+    width: 90%;
+    margin: 30px auto 00px auto;
+  }
+  .how-layer-bg .how-layer .login-box .login-rel {
+    font-size: 14px;
+  }
+  .how-layer-bg .how-layer .login-box .login-setting .lab-check {
+    font-size: 14px;
+  }
+}
+
+/*반응형 - 아이패드 기준*/
+@media only screen and (max-width: 768px) {
+  /*공통*/
+  .body {
+    min-height: 100%;
+    position: relative;
+    padding-bottom: 320px;
+  }
+  .wrap {
+    width: 95%;
+  }
+  /*메인*/
+  .main-visual {
+    min-height: 600px;
+    background-position-x: center;
+    background-size: cover;
+  }
+  .main-visual .wrap {
+    width: 100%;
+    padding-top: 0;
+  }
+  .main-visual .how-title-wrap h2 {
+    font-size: 35px;
+  }
+  .index-con {
+    padding: 60px 0 0px 0;
+  }
+  .index-con h3 {
+    font-size: 24px;
+  }
+  .index-con .how-test p {
+    font-size: 16px;
+  }
+  /*풋터*/
+  .footer .address {
+    float: none;
+    width: 100%;
+  }
+  .footer .call {
+    float: none;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/*반응형 - 아이폰플러스 기준*/
+@media only screen and (max-width: 414px) {
+  /*공통*/
+  .m-br {
+    display: block;
+  }
+  .phone-disnone {
+    display: none !important;
+  }
+  .body {
+    padding-bottom: 382px;
+  }
+}
